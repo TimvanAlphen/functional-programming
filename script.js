@@ -36,6 +36,8 @@ console.log("Niveau is:" ,niveau)
 
 console.log(emoji)
 
+//Github test
+
 
 /*
 let dogs = [] 
