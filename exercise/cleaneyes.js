@@ -8,11 +8,9 @@ const surveyAnswers = data
 let kolomNaam = "oogKleur"
 let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, kolomNaam)
 
-//console.log van de lijst met antwoorden.
-//console.log("Survey answers are:",lijstAntwoorden)
-
 
 //Function that saves an array with the answersForQuestions and pushes them to the variable "lijstAntwoorden".
+//Thanks to lecture from Laurens.
 function getAnswersForQuestion(answers, question){
 	let answersForQuestion = []
   for (answer of answers){
@@ -21,42 +19,12 @@ function getAnswersForQuestion(answers, question){
 	return answersForQuestion
 }
 
-/*
-//The filter function only returns 'MBO' Bron: https://www.youtube.com/watch?v=BMUiFMZr7vk&ab_channel=FunFunFunction
-let niveau = lijstAntwoorden.filter(function(lijstAntwoorden) {
-	return lijstAntwoorden === 'HAVO'
-})
-
-//Map adds an eomji "=)" after MBO.
-let emoji = niveau.map(function(niveau){
-	return niveau + ' =)'
-})
-*/
-
-
-/*
+//A .map that changes the variable "lijstAntwoorden" to upper case.
 let upperCased = lijstAntwoorden.map(lijstAntwoorden => lijstAntwoorden.toUpperCase());
-
-
+//A .filter that removes the strigs in the variable "upperCased" that aren't 7 symbols long.
 let correctHexValues = upperCased.filter(upperCased => upperCased.length == 7)
-*/
-	//console.log(upperCased)
-	//console.log(correctHexValues)
 
 
 
-console.log("Niveau is:" ,niveau)
-
-console.log(emoji)
-
-
-
-/*
-let dogs = [] 
-for (let i = 0; i < animals.length; i++) {
-	if (animals[i].species === 'dog')
-		dogs.push(animals[i])
-}
-
-
-*/
+	console.log("Uppercased dataset:" ,upperCased)
+	console.log("Only 7 symblos:" ,correctHexValues)
