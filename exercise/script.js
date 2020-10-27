@@ -12,7 +12,7 @@ let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, kolomNaam)
 //Thanks to lecture from Laurens.
 function getAnswersForQuestion(answers, question){
 	let answersForQuestion = []
-  for (answer of answers){
+  for (const answer of answers){
   	answersForQuestion.push(answer[question])
  }
 	return answersForQuestion
@@ -20,16 +20,54 @@ function getAnswersForQuestion(answers, question){
 
 //console.log(lijstAntwoorden)
 
-function myFunction(p1, p2) {
-	let myFunction = []
 
-	for (let i = 0; i < lijstAntwoorden.length; i++) {
-		myFunction.push(answer[question])
+//A .map that changes the variable "lijstAntwoorden" to upper case.
 
-		 if (p2[p1].includes("#")) {
-        console.log(myFunction);
- 
+//A .filter that removes the strigs in the variable "upperCased" that aren't 7 symbols long.
+
+
+// Loop through answers and make all items uppercase.
+function filterEyeColors(listOfEyeColors) {
+	// Transform every eye color to uppercase.
+	let upperCased = listOfEyeColors.map(color => color.toUpperCase())
+
+	// Filter out all invalid Hex codes.
+	let correctHexValues = upperCased.filter(color => {
+		if (color.startsWith('#') && color.length === 7) {
+			return color
+		}
+	})
+
+	return correctHexValues
+}
+
+
+
+console.log('correctHexValues: ', filterEyeColors(lijstAntwoorden))
+
+
+	//console.log("Uppercased dataset:" ,upperCased)
+	//console.log("Only 7 symblos:" ,correctHexValues)
+
+
+console.log('for loop: ', filterEyeColorsForLoop(lijstAntwoorden))
+
+
+function filterEyeColorsForLoop(listOfEyeColors) {
+// Create an array for my filtered data.
+	let filteredData = []
+
+	for (const color of listOfEyeColors) { 
+		// Check if the hex code is valid.
+		if (color.startsWith('#') && color.length === 7) {
+			// Change hex to uppercase
+			const hexColor = color.toUpperCase()
+
+			// Add color to filtered list
+			filteredData.push(hexColor)
+		}
      }
-	}
+
+    return filteredData
 }
 
