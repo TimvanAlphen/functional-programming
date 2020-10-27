@@ -1,5 +1,4 @@
-//console.log("Hello world!");
-
+console.log("Hello World!")
 
 //The survey data is loaded from an .js file.
 const surveyAnswers = data
@@ -19,12 +18,18 @@ function getAnswersForQuestion(answers, question){
 	return answersForQuestion
 }
 
-//A .map that changes the variable "lijstAntwoorden" to upper case.
-let upperCased = lijstAntwoorden.map(lijstAntwoorden => lijstAntwoorden.toUpperCase());
-//A .filter that removes the strigs in the variable "upperCased" that aren't 7 symbols long.
-let correctHexValues = upperCased.filter(upperCased => upperCased.length == 7)
+//console.log(lijstAntwoorden)
 
+function myFunction(p1, p2) {
+	let myFunction = []
 
+	for (let i = 0; i < lijstAntwoorden.length; i++) {
+		myFunction.push(answer[question])
 
-	console.log("Uppercased dataset:" ,upperCased)
-	console.log("Only 7 symblos:" ,correctHexValues)
+		 if (p2[p1].includes("#")) {
+        console.log(myFunction);
+ 
+     }
+	}
+}
+
