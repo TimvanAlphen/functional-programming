@@ -43,5 +43,5 @@ Open Data Parkeren: SPECIALE DAG (https://opendata.rdw.nl/Parkeren/Open-Data-Par
 Variables:
 
 * AreaManagerId
-* NameSpecialDay (This doesn't say anythis about how much the prices change.)
+* NameSpecialDay (This doesn't say anything about how much the prices change.)
 * DateSpecialDay
