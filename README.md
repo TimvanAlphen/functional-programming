@@ -1,6 +1,6 @@
 # Functional-Programming The Volkskrant
 
-De volkskarnt asked us to design a interactive visualisation for the subject: "The car in the city". To do this we get to use data from the RDW (https://opendata.rdw.nl/browse?category=Parkeren&provenance=official). This data contains information about parking spaces in big cities in the Netherlands.
+De volkskarnt asked us to design an interactive visualisation for the subject: "The car in the city". To do this we get to use data from the RDW (https://opendata.rdw.nl/browse?category=Parkeren&provenance=official). This data contains information about parking spaces in big cities in the Netherlands.
 
 ## Research Question:
 
@@ -16,7 +16,7 @@ How do costs, accesability and special parking days (like sundays) change from a
 
 ### Assumptions:
 
-I'm pretty sure that company owned parking spots are going to be more expensive than township owned one's. I also thing that company owned parking stopt are less accessible for peaple with dissabilities and that township parkingspots are trying to be more accessible to everyone. I think special parking days are the same for both.
+I'm pretty sure that company owned parking spots are going to be more expensive than township owned one's. I also think that company owned parking spots are less accessible for peaple with dissabilities and that township parkingspots are trying to be more accessible to everyone. I think special parking days are the same for both.
 
 ## Datasets and Variables:
 
@@ -54,18 +54,20 @@ Open Data Parkeren: SPECIALE DAG (https://opendata.rdw.nl/Parkeren/Open-Data-Par
 Variables:
 
 * AreaManagerId
-* NameSpecialDay (This variable shows what special days like sundays the parkinglocations have.(This doesn't say anything about how much the prices change.))
+* NameSpecialDay (This variable shows what special days like sundays the parkinglocations have. (This doesn't say anything about how much the prices change.))
 * DateSpecialDay (This variable shows the dates of these special days.)
 
 ## Most interesting functional pattern:
 
-This function looks through all the answers in in the list of eye colors that transforms all the names to uppercase with .map. It than filters out the invalid hex codes by looking if they start with an '#' and are 7 characters long using .filter.
+This function looks through all the answers in in the list of eye colors than transforms all the names to uppercase with .map. It than filters out the invalid hex codes by looking if they start with an '#' and are 7 characters long using .filter.
 
 https://github.com/TimvanAlphen/functional-programming/blob/99b6888f349b306ff1139859019f5bc8170ccce3/exercise/cleaneyes2.js#L30
 
 ### Early sketch
 
 ![Sketch](https://github.com/TimvanAlphen/functional-programming/blob/main/img/Sketch1.jpg)
+
+With this data visualisation I want to compare Company owned parkinglocations to township owned parking locations. To do this I came up with this rough sketch. First the user selects two parkinglocations from the dropdowns. One for company owned locations and one for township owned ones. Two stacked-barcharts will be generated that compare the price of the parkinglocation, the amount of spots for people with a disability and the amount of special parking days. This way company and township parking spots are easily compared.
 
 ### Source
 These datasets are taken from opendata.rdw.nl.
