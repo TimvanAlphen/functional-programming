@@ -1,8 +1,18 @@
-# functional-programming
- 
+# functional-programming The Volkskrant
+
+De volkskarnt asked us to design a interactive visualisation for the subject: "The car in the city". To do this we get to use data from the RDW (https://opendata.rdw.nl/browse?category=Parkeren&provenance=official). This data contains information about parking spaces in big cities in the Netherlands.
+
 ## Research Question:
 
 How do costs, accesability and special parking days (like sundays) change from a company owned parking spot to a township owned parking spot?
+
+### Sub questions:
+
+* How many parkinglocations are company owned and how many are owned by a township?
+* Are prices the same across all parkinglocation per owner?
+* Are parkinglocations with accesability options more expensive?
+* Are the special parking days the same across all parkinglocations owned by the same company or township?
+
 
 ### Assumptions:
 
@@ -30,11 +40,12 @@ Variables:
 
 ### Dataset:
 
-Aangesloten NPR Gemeenten Gehandicaptenparkeerkaart (https://opendata.rdw.nl/Parkeren/Aangesloten-NPR-Gemeenten-Gehandicaptenparkeerkaar/hn7m-6795)
+Open Data Parkeren: SPECIFICATIES PARKEERGEBIED (https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-SPECIFICATIES-PARKEERGEBIED/b3us-f26s/data#revert)
 
 Variables:
 
-* Geo Locations (Don't know how to connect this dataset with the others.)
+* AreaManagerId
+* DisabledAccess
 
 ### Dataset: 
 
