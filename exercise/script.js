@@ -1,14 +1,14 @@
 console.log("Hello world")
-
+//Code taken from lecture by Laurens
 const endpoint = 'https://opendata.rdw.nl/resource/t5pc-eb34.json'
 const selectedColumn = 'areaid'
 
 getData(endpoint)
-  .then(data => {
-  	console.log("all data: ", data)
-  	console.log("one datum,", data[0])
-	const areaIdArray = filterData(data, selectedColumn)
-	const usageArray = filterData(data, 'usageid')
+  .then(RDWData => {
+  	console.log("all data: ", RDWData)
+  	console.log("one datum,", RDWData[0])
+	const areaIdArray = filterData(RDWData, selectedColumn)
+	const usageArray = filterData(RDWData, 'usageid')
 	console.log(usageArray)
 })
 
@@ -19,7 +19,7 @@ async function getData(url){
 }
 
 
-
-function filterData(dataArray, column) {
-	return dataArray.map(item => item[column])
+//returns all values for for a certain key in an array of data.
+function filterData(dataArray, key) {
+	return dataArray.map(item => item[key])
 }
