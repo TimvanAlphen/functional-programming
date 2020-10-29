@@ -9,7 +9,7 @@ let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, kolomNaam)
 
 
 //Function that saves an array with the answersForQuestions and pushes them to the variable "lijstAntwoorden".
-//Thanks to lecture from Laurens.
+//Thanks to lecture by Laurens.
 function getAnswersForQuestion(answers, question){
 	let answersForQuestion = []
   for (const answer of answers){
@@ -25,7 +25,7 @@ function getAnswersForQuestion(answers, question){
 
 //A .filter that removes the strigs in the variable "upperCased" that aren't 7 symbols long.
 
-
+//Written with help from Gijs Laarman
 // Loop through answers and make all items uppercase.
 function filterEyeColors(listOfEyeColors) {
 	// Transform every eye color to uppercase.
@@ -52,7 +52,7 @@ console.log('correctHexValues: ', filterEyeColors(lijstAntwoorden))
 
 console.log('for loop: ', filterEyeColorsForLoop(lijstAntwoorden))
 
-
+//Written with help from Gijs Laarman
 function filterEyeColorsForLoop(listOfEyeColors) {
 // Create an array for my filtered data.
 	let filteredData = []
