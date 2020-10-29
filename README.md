@@ -65,7 +65,7 @@ https://github.com/TimvanAlphen/functional-programming/blob/99b6888f349b306ff113
 
 ### Early sketch
 
-![Sketch](Sketch1.jpg)
+![Sketch](https://github.com/TimvanAlphen/functional-programming/blob/main/img/Sketch1.jpg)
 
 ### Source
 These datasets are taken from opendata.rdw.nl.
