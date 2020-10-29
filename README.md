@@ -63,6 +63,10 @@ This function looks through all the answers in in the list of eye colors that tr
 
 https://github.com/TimvanAlphen/functional-programming/blob/99b6888f349b306ff1139859019f5bc8170ccce3/exercise/cleaneyes2.js#L30
 
+### Early sketch
+
+https://github.com/TimvanAlphen/functional-programming/blob/99b6888f349b306ff1139859019f5bc8170ccce3/img/Sketch.jpg
+
 ### Source
 These datasets are taken from opendata.rdw.nl.
 
