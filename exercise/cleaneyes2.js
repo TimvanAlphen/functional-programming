@@ -18,12 +18,6 @@ function getAnswersForQuestion(answers, question){
 	return answersForQuestion
 }
 
-//console.log(lijstAntwoorden)
-
-
-//A .map that changes the variable "lijstAntwoorden" to upper case.
-
-//A .filter that removes the strigs in the variable "upperCased" that aren't 7 symbols long.
 
 //Written with help from Gijs Laarman
 // Loop through answers and make all items uppercase.
@@ -44,13 +38,8 @@ function filterEyeColors(listOfEyeColors) {
 
 
 console.log('correctHexValues: ', filterEyeColors(lijstAntwoorden))
-
-
-	//console.log("Uppercased dataset:" ,upperCased)
-	//console.log("Only 7 symblos:" ,correctHexValues)
-
-
 console.log('for loop: ', filterEyeColorsForLoop(lijstAntwoorden))
+
 
 //Written with help from Gijs Laarman
 function filterEyeColorsForLoop(listOfEyeColors) {

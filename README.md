@@ -1,4 +1,4 @@
-# functional-programming The Volkskrant
+# Functional-Programming The Volkskrant
 
 De volkskarnt asked us to design a interactive visualisation for the subject: "The car in the city". To do this we get to use data from the RDW (https://opendata.rdw.nl/browse?category=Parkeren&provenance=official). This data contains information about parking spaces in big cities in the Netherlands.
 
@@ -26,8 +26,8 @@ Open Data Parkeren: GEBIEDSBEHEERDER (https://opendata.rdw.nl/Parkeren/Open-Data
 
 Variables: 
 
-* AreaManagerId
-* AreaManagerDesc
+* AreaManagerId (Every parkinglocation owner has their own Id code. The other datasets also show this code. This way I can connect the datasets.)
+* AreaManagerDesc (This variable contains the names of every parkinglocation owner.)
 
 ### Dataset: 
 
@@ -35,7 +35,7 @@ Open Data Parkeren: TARIEFBEREKENING (https://opendata.rdw.nl/Parkeren/Open-Data
 
 Variables:
 
-* AreaManagerId
+* AreaManagerId 
 * FareCalculationDesc (Calculating prices is unclear for now.)
 
 ### Dataset:
@@ -45,7 +45,7 @@ Open Data Parkeren: SPECIFICATIES PARKEERGEBIED (https://opendata.rdw.nl/Parkere
 Variables:
 
 * AreaManagerId
-* DisabledAccess
+* DisabledAccess (This variable shows if the Parkinglocations are accessable for people with a disability.)
 
 ### Dataset: 
 
@@ -54,5 +54,16 @@ Open Data Parkeren: SPECIALE DAG (https://opendata.rdw.nl/Parkeren/Open-Data-Par
 Variables:
 
 * AreaManagerId
-* NameSpecialDay (This doesn't say anything about how much the prices change.)
-* DateSpecialDay
+* NameSpecialDay (This variable shows what special days like sundays the parkinglocations have.(This doesn't say anything about how much the prices change.))
+* DateSpecialDay (This variable shows the dates of these special days.)
+
+## Most interesting functional pattern:
+
+This function looks through all the answers in in the list of eye colors that transforms all the names to uppercase with .map. It than filters out the invalid hex codes by looking if they start with an '#' and are 7 characters long using .filter.
+
+https://github.com/TimvanAlphen/functional-programming/blob/99b6888f349b306ff1139859019f5bc8170ccce3/exercise/cleaneyes2.js#L30
+
+### Source
+These datasets are taken from opendata.rdw.nl.
+
+https://opendata.rdw.nl/browse?category=Parkeren&provenance=official&page=3
