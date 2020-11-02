@@ -1,26 +1,35 @@
-console.log("Hello world")
-//Code taken from lecture by Laurens
-const endpoint = 'https://opendata.rdw.nl/resource/t5pc-eb34.json'
-const selectedColumn = 'areaid'
 
-getData(endpoint)
-  .then(RDWData => {
-  	console.log("all data: ", RDWData)
-  	console.log("one datum,", RDWData[0])
-	const areaIdArray = filterData(RDWData, selectedColumn)
-	const usageArray = filterData(RDWData, 'usageid')
-	console.log(usageArray)
+//The survey data is loaded from an .js file.
+const surveyAnswers = data
+
+//Variables with the surveyAnwsers and columnname of "oogKleur"
+let kolomNaam = "oogKleur"
+let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, kolomNaam)
+
+
+console.log("Niveau is:" ,niveau)
+
+console.log(emoji)
+
+
+//Function that saves an array with the answersForQuestions and pushes them to the variable "lijstAntwoorden".
+function getAnswersForQuestion(answers, question){
+	let answersForQuestion = []
+  for (answer of answers){
+  	answersForQuestion.push(answer[question])
+ }
+	return answersForQuestion
+}
+
+
+//The filter function only returns 'HAVO' Bron: https://www.youtube.com/watch?v=BMUiFMZr7vk&ab_channel=FunFunFunction
+let niveau = lijstAntwoorden.filter(function(lijstAntwoorden) {
+	return lijstAntwoorden === 'HAVO'
 })
 
-function getData(url){
-	return fetch(url)
-	const response  fetch(url)
-	const data  response.json()
-	return data
-}
+//Map adds an eomji "=)" after HAVO.
+let emoji = niveau.map(function(niveau){
+	return niveau + ' =)'
+})
 
 
-//returns all values for for a certain key in an array of data.
-function filterData(dataArray, key) {
-	return dataArray.map(item => item[key])
-}
